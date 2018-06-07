@@ -1,0 +1,60 @@
+@import "eyes.css"; /*Imports new css file*/
+
+p::first-letter {
+  font-weight: bold;
+  font-size: 150%;
+  font-family: cursive;
+  color: steelblue;
+}
+
+p::first-line {
+  font-style: italic;
+  letter-spacing: 2px;
+  word-spacing: 6px;
+}
+
+
+
+.moustache {
+  width: 180px;
+  height: 180px;
+  color: black;
+  /* background-color: currentColor; */
+  position: absolute;
+  top: 100px;
+  left: 0px;
+  box-shadow:
+    350px 150px 0 0 currentColor,
+    450px 150px 0 0 currentColor;
+  border-radius: 100%;
+}
+
+.moustache::before {
+  width: 180px;
+  height: 180px;
+  content: ""; /*necessary to show before pseudo class */
+  /* background-color: red; */
+  position: absolute;
+  top: 105px;
+  left: 222px;
+  border-bottom: 180px solid currentColor;
+  border-radius: 0 0 0 100%;
+  transform: rotate(-60deg);
+}
+
+.moustache::after {
+  width: 180px;
+  height: 180px;
+  content: ""; /*necessary to show before pseudo class */
+  /* background-color: red; */
+  position: absolute;
+  top: 105px;
+  left: 578px;
+  border-bottom: 180px solid currentColor;
+  border-radius: 0 0 100%;
+  transform: rotate(60deg);
+}
+
+.eyes{
+  color: steelblue;
+}
